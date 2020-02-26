@@ -4,7 +4,9 @@
       <a href>Weapons</a>
       <a href>Monsters</a>
     </div>
-    <button class="header__button--main">Join the hunt</button>
+    <!--
+    <button class="header__button--main">Join the Hunt</button>
+    -->
   </div>
 </template>
 
@@ -43,7 +45,14 @@ export default {
   font-size: 1.5em;
   text-align: center;
   margin: auto;
-  background-color: #5c5150;
+  opacity: 0.4;
+  background-color: #030303;
+  :hover {
+    color: rgb(124, 212, 124);
+  }
+  :active {
+    color: rgb(70, 119, 70);
+  }
 }
 
 .header__link a {
@@ -61,6 +70,14 @@ export default {
   border-radius: 1.5em;
   font-size: 1.2em;
   font-weight: bold;
-  color: rgba(15, 14, 14, 0.781);
+  color: rgb(226, 243, 187);
+  background-color: rgb(114, 155, 91);
+  &:hover {
+    background-color: rgb(137, 187, 108);
+    color: rgb(236, 240, 234);
+    &:active {
+      background-color: rgb(115, 158, 90);
+    }
+  }
 }
 </style>
