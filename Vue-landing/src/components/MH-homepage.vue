@@ -1,14 +1,17 @@
 <template>
   <div>
-    <router-view></router-view>
+    <Mh-header></Mh-header>
+    <Mh-cards></Mh-cards>
+    <Mh-map></Mh-map>
+    <Mh-footer></Mh-footer>
   </div>
 </template>
 
 <script>
-import MHheader from "./components/MH-header.vue";
-import MHcards from "./components/MH-cards.vue";
-import MHmap from "./components/MH-map.vue";
-import MHfooter from "./components/MH-footer.vue";
+import MHheader from "./MH-header.vue";
+import MHcards from "./MH-cards.vue";
+import MHmap from "./MH-map.vue";
+import MHfooter from "./MH-footer.vue";
 
 export default {
   components: {

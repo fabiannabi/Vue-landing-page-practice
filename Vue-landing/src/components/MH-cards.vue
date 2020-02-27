@@ -1,7 +1,7 @@
 <template>
   <div class="cards">
     <div class="card__container" v-for="card in CardsInfo" :key="card.id">
-      <div class="cards__tittle">{{card.title}}</div>
+      <h1 class="cards__tittle">{{card.title}}</h1>
       <img class="cards__img" v-bind:src="card.img" alt />
       <div class="cards__description">{{card.description}}</div>
     </div>
