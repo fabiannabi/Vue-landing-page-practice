@@ -73,6 +73,7 @@ export default {
 }
 .map__information {
   text-align: center;
+  font-family: "Marcellus SC", "fallback", Helvetica, Arial, sans-serif;
   h2 {
     margin: 1em;
     color: black;

@@ -1,9 +1,16 @@
 <template>
   <div class="header">
-    <div class="header__link">
-      <a href>Weapons</a>
-      <a href>Monsters</a>
-    </div>
+    <ul class="header__link">
+      <li>
+        <router-link to="/weapons" exact>WEAPONS</router-link>
+      </li>
+      <li>
+        <router-link to="/monsters" exact>MONSTERS</router-link>
+      </li>
+      <li>
+        <router-link to="/" exact>HOME</router-link>
+      </li>
+    </ul>
     <!--
     <button class="header__button--main">Join the Hunt</button>
     -->
@@ -22,13 +29,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+<style lang="scss" scoped>
 .header {
   background-image: url(../assets/mh-title.jpg);
   height: 100vh;
@@ -43,8 +44,11 @@ export default {
 }
 .header__link {
   font-size: 1.5em;
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin: auto;
+  color: white;
   opacity: 0.4;
   background-color: #030303;
   :hover {

@@ -1,6 +1,7 @@
 <template>
   <div>
     <router-view></router-view>
+    <Mh-footer></Mh-footer>
   </div>
 </template>
 
@@ -25,4 +26,10 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+</style>

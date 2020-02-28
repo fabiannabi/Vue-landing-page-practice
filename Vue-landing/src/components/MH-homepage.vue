@@ -3,7 +3,6 @@
     <Mh-header></Mh-header>
     <Mh-cards></Mh-cards>
     <Mh-map></Mh-map>
-    <Mh-footer></Mh-footer>
   </div>
 </template>
 

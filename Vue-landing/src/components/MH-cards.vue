@@ -49,6 +49,7 @@ export default {
   padding-bottom: 5em;
   grid-gap: 10px;
   background-color: rgba(151, 153, 151, 0.973);
+  font-family: "Marcellus SC", "fallback", Helvetica, Arial, sans-serif;
 
   justify-items: center;
   :hover {
@@ -76,6 +77,6 @@ export default {
   font-size: 1.5em;
 }
 .cards__description {
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 </style>
