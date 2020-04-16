@@ -11,14 +11,11 @@
         <router-link to="/" exact>HOME</router-link>
       </li>
     </ul>
-    <!--
-    <button class="header__button--main">Join the Hunt</button>
-    -->
+    <div class="logo">
+      <img src="../assets/logo.png" alt="logo" />
+    </div>
   </div>
 </template>
-
-
-
 
 <script>
 export default {
@@ -29,12 +26,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 .header {
-  background-image: url(../assets/mh-title.jpg);
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
+  background: #bfd2eb52;
+  width: auto;
+  min-height: 40vh;
 }
 .container {
   padding-right: 15px;
@@ -48,40 +44,31 @@ export default {
   justify-content: center;
   text-align: center;
   margin: auto;
-  color: white;
-  opacity: 0.4;
-  background-color: #030303;
+  background-color: rgba(151, 175, 226, 0.404);
+}
+
+.header__link li {
+  margin: 20px;
+
+  list-style: none;
   :hover {
-    color: rgb(124, 212, 124);
+    transition: ease-out 1s;
+    color: rgba(3, 8, 151, 0.849);
   }
   :active {
-    color: rgb(70, 119, 70);
+    color: rgb(28, 10, 150);
   }
 }
 
 .header__link a {
-  margin: 100px;
+  list-style: none;
   text-decoration: none;
-  color: white;
-}
-
-.header__button--main {
-  display: flex;
-  padding: 10px;
-  margin-top: 750px;
-  margin-right: auto;
-  margin-left: auto;
-  border-radius: 1.5em;
-  font-size: 1.2em;
   font-weight: bold;
-  color: rgb(226, 243, 187);
-  background-color: rgb(114, 155, 91);
-  &:hover {
-    background-color: rgb(137, 187, 108);
-    color: rgb(236, 240, 234);
-    &:active {
-      background-color: rgb(115, 158, 90);
-    }
-  }
+  color: rgba(79, 74, 204, 0.678);
+}
+.logo {
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 </style>

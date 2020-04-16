@@ -1,25 +1,9 @@
 <template>
   <div class="monster">
-    <div class="header">
-      <ul class="header__link">
-        <li>
-          <router-link to="/weapons" exact>WEAPONS</router-link>
-        </li>
-        <li>
-          <router-link to="/monsters" exact>MONSTERS</router-link>
-        </li>
-        <li>
-          <router-link to="/" exact>HOME</router-link>
-        </li>
-      </ul>
-      <!--
-    <button class="header__button--main">Join the Hunt</button>
-      -->
-    </div>
+    <h1 class="title">DISCOVER NEW CREATURES</h1>
     <div class="monster__container">
-      <h1 class="title">MONSTER HUNTER CREATURES</h1>
       <div class="monster__cards" v-for="monster in monsters" :key="monster.id">
-        <img :src="monster.img" alt="monster" />
+        <img class="monster__img" :src="monster.img" alt="monster" />
         <div class="monster__info">
           <h2>{{monster.type}}</h2>
           <p>{{monster.description}}</p>
@@ -66,7 +50,7 @@ export default {
           type: "Kulve Taroth",
           img: "../src/assets/kulve.jpg",
           description:
-            "An Elder Dragon that protects itself with a glittering coat of metal. Its ecology and coat differ with each appearance, thus the need for a thorough investigation. An exhaustive investigation is required in order to break Kulve Taroth's giant gold plated horns. Pursue the monster to learn more about it. Gather tracks and recruit hunters to help you further your investigation"
+            "An Elder Dragon that protects itself with a glittering coat of metal. Its ecology and coat differ with each appearance."
         }
       ]
     };
@@ -75,60 +59,44 @@ export default {
 </script>
 
 <style lang="scss" >
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-.header__link {
-  font-size: 1.5em;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: auto;
-  color: white;
-  opacity: 0.4;
-  background-color: #030303;
-  :hover {
-    color: rgb(124, 212, 124);
-  }
-  :active {
-    color: rgb(70, 119, 70);
-  }
-}
-
-.header__link a {
-  margin: 100px;
-  text-decoration: none;
-  color: white;
+.monster {
+  margin: 4rem 0;
 }
 .title {
   text-align: center;
-  margin: 20px;
 }
 .monster__container {
-  background-color: rgba(151, 153, 151, 0.973);
+  margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+  align-items: center;
+  justify-items: center;
+  grid-gap: 15px;
   padding-bottom: 1em;
-  :hover {
-    background-color: rgba(184, 184, 184, 0.884);
-  }
 }
 .monster__cards {
-  margin-left: 25%;
-  margin-right: 25%;
-  background-color: rgb(146, 145, 145);
+  height: 350px;
+  width: 650px;
+  background-color: rgb(162, 182, 196);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  border-radius: 20px;
   justify-items: center;
   p {
     font-size: 1.3em;
-    font-family: "Marcellus SC", "fallback", Helvetica, Arial, sans-serif;
     text-align: justify;
   }
+}
+
+.monster__cards:hover {
+  transition: 0.2s ease-out;
+  transform: scale(1.009);
+  background-color: rgba(132, 143, 177, 0.884);
+}
+.monster__img {
+  border-radius: 10px;
+  box-shadow: 10px 5px rgb(111, 117, 134);
 }
 .monster__info {
   text-align: start;

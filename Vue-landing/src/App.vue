@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Mh-header></Mh-header>
     <router-view></router-view>
     <Mh-footer></Mh-footer>
   </div>
@@ -26,10 +27,12 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 html {
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Marcellus SC", "fallback", Helvetica, Arial, sans-serif;
 }
 </style>

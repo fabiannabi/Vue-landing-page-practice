@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Mh-header></Mh-header>
     <Mh-cards></Mh-cards>
     <Mh-map></Mh-map>
   </div>
@@ -28,3 +27,4 @@ export default {
 </script>
 
 <style lang="scss"></style>
+

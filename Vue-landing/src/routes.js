@@ -1,5 +1,5 @@
 import weapons from "./components/MH-weapons.vue";
-import homepage from "./components/MH-homepage.vue";
+import homepage from "./components/Home.vue";
 import monsters from "./components/MH-monsters.vue";
 
 export default [

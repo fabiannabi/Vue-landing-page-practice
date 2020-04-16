@@ -1,25 +1,9 @@
 <template>
   <div class="weapons">
-    <div class="header">
-      <ul class="header__link">
-        <li>
-          <router-link to="/weapons" exact>WEAPONS</router-link>
-        </li>
-        <li>
-          <router-link to="/monsters" exact>MONSTERS</router-link>
-        </li>
-        <li>
-          <router-link to="/" exact>HOME</router-link>
-        </li>
-      </ul>
-      <!--
-    <button class="header__button--main">Join the Hunt</button>
-      -->
-    </div>
+    <h1 class="title">CRAFT AMAZING WEAPONS</h1>
     <div class="weapons__container">
-      <h1 class="title">MONSTER HUNTER WEAPONS</h1>
       <div class="weapons__cards" v-for="weapon in weapons" :key="weapon.id">
-        <img :src="weapon.img" alt="weapons" />
+        <img class="weapon__img" :src="weapon.img" alt="weapons" />
         <div class="weapons__info">
           <h2>{{weapon.type}}</h2>
           <p>{{weapon.description}}</p>
@@ -80,46 +64,32 @@ export default {
   margin: 0;
   padding: 0;
 }
-.header__link {
-  font-size: 1.5em;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: auto;
-  color: white;
-  opacity: 0.4;
-  background-color: #030303;
-  :hover {
-    color: rgb(124, 212, 124);
-  }
-  :active {
-    color: rgb(70, 119, 70);
-  }
+.weapons {
+  margin: 4rem 0;
 }
 
-.header__link a {
-  margin: 100px;
-  text-decoration: none;
-  color: white;
-}
 .title {
   text-align: center;
   margin: 20px;
 }
 .weapons__container {
-  background-color: rgba(151, 153, 151, 0.973);
+  margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+  align-items: center;
+  justify-items: center;
   grid-gap: 10px;
   padding-bottom: 1em;
-  :hover {
-    background-color: rgba(184, 184, 184, 0.884);
-  }
+}
+.weapons__cards:hover {
+  transition: 0.2s ease-out;
+  transform: scale(1.009);
+  background-color: rgba(134, 153, 179, 0.884);
 }
 .weapons__cards {
-  margin-left: 25%;
-  margin-right: 25%;
-  background-color: rgb(146, 145, 145);
+  height: 350px;
+  width: 650px;
+  background-color: rgb(162, 182, 196);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -127,8 +97,12 @@ export default {
   p {
     font-size: 1.3em;
     text-align: justify;
-    font-family: "Marcellus SC", "fallback", Helvetica, Arial, sans-serif;
   }
+}
+.weapon__img {
+  background-color: rgba(104, 139, 153, 0.692);
+  border-radius: 10px;
+  box-shadow: 10px 5px rgb(111, 117, 134);
 }
 .weapons__info {
   text-align: start;

@@ -49,27 +49,26 @@ export default {
 <style lang="scss">
 .map__container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(autofill, minmax(500px, 1fr));
   grid-gap: 10px;
   padding: 2em 2em;
   justify-items: center;
   align-items: center;
-  background-color: rgba(150, 150, 150, 0.973);
 }
 
 .map__slideshow img {
   height: 500px;
   width: auto;
-  box-shadow: 10px 10px grey;
+  box-shadow: 10px 10px rgb(57, 87, 114);
 }
 .map__buttons {
   grid-row-start: 2;
 }
 .map__buttons button {
   padding: 0.5em 0.5em;
-  border-style: solid 1px black;
+  border-style: solid 1px rgb(0, 0, 0);
   border-radius: 50px;
-  background-color: rgba(95, 97, 95, 0.568);
+  background-color: rgba(10, 56, 155, 0.568);
 }
 .map__information {
   text-align: center;
@@ -80,6 +79,19 @@ export default {
   }
   p {
     font-size: 1.3em;
+  }
+}
+@media (max-width: 1000px) {
+  .map__information {
+    text-align: center;
+    font-family: "Marcellus SC", "fallback", Helvetica, Arial, sans-serif;
+    h2 {
+      margin: 1.5em;
+      color: black;
+    }
+    p {
+      font-size: 1.5em;
+    }
   }
 }
 </style>

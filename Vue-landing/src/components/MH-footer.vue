@@ -19,8 +19,8 @@ export default {
 
 <style lang="scss">
 .footer {
-  background-color: rgb(143, 143, 143);
-  color: white;
+  background-color: rgba(159, 112, 247, 0.137);
+  color: rgb(40, 51, 145);
   display: flex;
   align-items: center;
   justify-content: center;

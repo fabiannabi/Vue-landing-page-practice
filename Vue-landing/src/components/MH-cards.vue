@@ -44,32 +44,34 @@ export default {
 <style lang="scss">
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   padding-top: 5em;
   padding-bottom: 5em;
-  grid-gap: 10px;
-  background-color: rgba(151, 153, 151, 0.973);
+  grid-gap: 15px;
   font-family: "Marcellus SC", "fallback", Helvetica, Arial, sans-serif;
-
   justify-items: center;
-  :hover {
-    background-color: rgba(184, 184, 184, 0.884);
-  }
 }
+
 .card__container {
   border-style: (solid 10px black);
-  border-radius: 10px;
+  border-radius: 20px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   max-width: 600px;
   height: 500px;
   justify-items: center;
   text-align: center;
-  background-color: rgb(146, 145, 145);
+  background-color: rgb(162, 182, 196);
+}
+
+.card__container:hover {
+  transition: 0.2s ease-out;
+  transform: scale(1.009);
+  background-color: rgba(132, 143, 177, 0.884);
 }
 .cards__img {
   height: 250px;
-  box-shadow: 10px 10px grey;
+  box-shadow: 10px 10px rgb(111, 117, 134);
   width: auto;
 }
 .cards__tittle {
@@ -78,5 +80,15 @@ export default {
 }
 .cards__description {
   font-size: 1.2em;
+}
+
+@media (max-width: 1000px) {
+  .cards__tittle {
+    padding-top: 1.5em;
+    font-size: 1.8em;
+  }
+  .cards__description {
+    font-size: 1.5em;
+  }
 }
 </style>
